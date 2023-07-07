@@ -14,7 +14,7 @@ export default function Login() {
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault()
         try {
-            const response = await axios.post('https://3.22.234.34:5000/api/v1/login', {email,password}, {
+            const response = await axios.post('http://3.22.234.34:5000/api/v1/login', {email,password}, {
                 headers: {
                     "Content-Type": "application/json",
                     "Access-Control-Allow-Origin": "*"                  }
