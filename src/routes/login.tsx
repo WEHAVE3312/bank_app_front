@@ -15,7 +15,9 @@ export default function Login() {
         e.preventDefault()
         try {
             const response = await axios.post('http://3.22.234.34:5000/api/v1/login', {email,password}, {
-              
+                headers: {
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "*"                  }
             });
             if (response.data.status == true){
                 const token = response.data.data.token
