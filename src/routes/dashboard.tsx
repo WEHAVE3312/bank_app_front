@@ -41,6 +41,8 @@ export default function Dashboard(){
         try {
           const response = await axios.post('http://3.22.234.34:5000/api/v1/bank/add', newBank, {
             headers: {
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*",
               'x-api-key': auth.token
             }
           });
